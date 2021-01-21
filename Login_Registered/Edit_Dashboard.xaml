@@ -1,0 +1,113 @@
+﻿<Window x:Class="Login_Registered.Edit_Dashboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Login_Registered"
+        mc:Ignorable="d"
+       Title="Edit Dashboard" 
+        WindowStartupLocation="CenterScreen" WindowState="Maximized"
+        WindowStyle="ThreeDBorderWindow" Background="#04c582" Icon="C:\Users\abhi\Desktop\hcci_logo.jpg" Height="700" Width="1200">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+
+        <Grid Height="630" Background="Black" Width="1200">
+
+            <!--Refresh Button-->
+            <Button Foreground="White" Width="77" Background="Brown" Click="Refresh_Click" Cursor="Hand" FontSize="15" Content="Refresh" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" />
+
+            <!--Back to Purchased Checkout Entries-->
+            <Button Foreground="White" Width="207" Background="Green" Click="BackToPurchasedCheckout_Click" Cursor="Hand" FontSize="15" Content="Purchased Checkout Entries" HorizontalAlignment="Left" Margin="99,10,0,0" VerticalAlignment="Top" />
+
+            <!--Back to Abandoned Checkout Entries-->
+            <Button Foreground="White" Width="207" Background="Red" Click="BackToAbandonedCheckout_Click" Cursor="Hand" FontSize="15" Content="Abandoned Checkout Entries" HorizontalAlignment="Left" Margin="320,10,0,0" VerticalAlignment="Top" />
+
+            <!--Back to Dashboard button-->
+            <Button Foreground="DarkGreen" Width="138" Background="Yellow" Click="BackToDashboard_Click" Cursor="Hand" FontSize="15" Content="Dashboard" HorizontalAlignment="Left" Margin="548,10,0,0" VerticalAlignment="Top" />
+
+            <!--Logout Button-->
+            <Button HorizontalAlignment="Right" FontSize="18" Foreground="White" Width="72" Background="#04c582" Content="Logout" Margin="0,42,25,0" VerticalAlignment="Top" Click="Logout_Click"/>
+
+            <!--Connected/Not connected status-->
+            <Label HorizontalAlignment="Right" Content="Conneted / Not-Connected" Name="status" FontSize="12" Foreground="White" Margin="0,75,25,532"  />
+
+            <!--Main Heading (Purchased Checkout)-->
+            <Label Foreground="White" FontSize="25" Content="Edit Your Dashboard" HorizontalContentAlignment="Center" Margin="354,27,334,0" VerticalAlignment="Top" Width="395"/>
+
+            <!--Profile Image-->
+            <Image  Name="ProfileSession" HorizontalAlignment="Left" Height="100" Margin="922,10,0,0" VerticalAlignment="Top" Width="100"/>
+
+            <!---UsernameSession-->
+            <Label Name="UsernameSession" FontSize="18" Foreground="White" Content="Username_Session" HorizontalContentAlignment="Right" HorizontalAlignment="Right" Margin="0,10,25,0" VerticalAlignment="Top" Width="151"/>
+
+
+            <!--Choose Product-->
+            <Label FontSize="18" Foreground="White" Content="Choose Product" HorizontalAlignment="Left" Margin="27,160,0,0" VerticalAlignment="Top" Width="219"/>
+            <RadioButton FontSize="18" Foreground="White" Content="Blanket Sauna - BS 100" HorizontalAlignment="Left" Margin="324,166,0,0" VerticalAlignment="Top" Height="28" Width="201"/>
+            <RadioButton FontSize="18" Foreground="White" Content="Blanket Sauna - BS 103" HorizontalAlignment="Left" Margin="326,199,0,0" VerticalAlignment="Top" Height="28" Width="201"/>
+            <RadioButton FontSize="18" Foreground="White" Content="Blanket Sauna - BS 106" HorizontalAlignment="Left" Margin="326,232,0,0" VerticalAlignment="Top" Height="28" Width="201"/>
+
+            <Separator Background="Yellow" HorizontalAlignment="Left" Height="20" Margin="34,282,0,0" VerticalAlignment="Top" Width="534"/>
+
+            <!--Product Variant you have-->
+            <Label FontSize="18" Foreground="White" Content="Product Variant You Have" HorizontalAlignment="Left" Margin="34,348,0,0" VerticalAlignment="Top" Width="219"/>
+            <TextBox Name="ProductVariant" Background="#545d6a" Foreground="White" FontSize="18" HorizontalAlignment="Left" Height="23" Margin="367,359,0,0" VerticalAlignment="Top" Width="201"/>
+
+
+            <!--Original Amount (MRP)-->
+            <Label FontSize="18" Foreground="White" Content="Original Amount of Chosen Product" HorizontalAlignment="Left" Margin="34,402,0,0" VerticalAlignment="Top" Width="299"/>
+            <TextBox Name="OriginalAmount" Background="#545d6a" Foreground="White" FontSize="18" HorizontalAlignment="Left" Height="23" Margin="367,413,0,0" VerticalAlignment="Top" Width="201"/>
+
+            <!--Purchased Amount-->
+            <Label FontSize="18" Foreground="White" Content="Purchased Customer Amount" HorizontalAlignment="Left" Margin="34,459,0,0" VerticalAlignment="Top" Width="299"/>
+            <TextBox Name="PurchasedAmount" Background="#545d6a" Foreground="White" FontSize="18" HorizontalAlignment="Left" Height="23" Margin="367,470,0,0" VerticalAlignment="Top" Width="201"/>
+
+
+            <!--Submit Changes-->
+            <Button HorizontalAlignment="Left" Click="SubmitChanges_Click"  Cursor="Hand" Height="36" Foreground="White" Background="#04c582" FontSize="18" Content="Submit Changes" Margin="34,536,0,0" VerticalAlignment="Top" Width="142"/>
+
+
+            <!---**********************************************-->
+
+
+            <Separator Background="Yellow" Height="20" Margin="302,427,443,0" VerticalAlignment="Top" Width="600" RenderTransformOrigin="0.5,0.5">
+                <Separator.RenderTransform>
+                    <TransformGroup>
+                        <RotateTransform Angle="90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Separator.RenderTransform>
+            </Separator>
+
+
+            <!---**********************************************-->
+
+
+            <!--Order Number Searched-->
+            <Label FontSize="18" Foreground="White" Content="Order Number Search" HorizontalAlignment="Left" Margin="628,160,0,0" VerticalAlignment="Top" Width="219"/>
+            <TextBox Name="OrderNumber" Background="#545d6a" Foreground="White" FontSize="18" HorizontalAlignment="Left" Height="23" Margin="877,160,0,0" VerticalAlignment="Top" Width="201"/>
+
+            <!--Display the searched Order Id details-->
+            <TextBlock FontSize="15" Foreground="Red" Background="Beige" HorizontalAlignment="Left" Margin="628,219,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="125" Width="547"/>
+
+
+            <!--Tracking Service Name-->
+            <Label FontSize="18" Foreground="White" Content="Tracking Service Name" HorizontalAlignment="Left" Margin="628,402,0,0" VerticalAlignment="Top" Width="219"/>
+            <TextBox Name="TrackingServiceName" Background="#545d6a" Foreground="White" FontSize="18" HorizontalAlignment="Left" Height="23" Margin="877,402,0,0" VerticalAlignment="Top" Width="201"/>
+
+            <!--Tracking ID-->
+            <Label FontSize="18" Foreground="White" Content="Tracking ID" HorizontalAlignment="Left" Margin="628,459,0,0" VerticalAlignment="Top" Width="219"/>
+            <TextBox Name="TrackingID" Background="#545d6a" Foreground="White" FontSize="18" HorizontalAlignment="Left" Height="23" Margin="877,459,0,0" VerticalAlignment="Top" Width="201"/>
+
+            <!--Submit button for Tracking ID-->
+            <Button HorizontalAlignment="Left" Click="SubmitTracking_Click"  Cursor="Hand" Height="36" Foreground="White" Background="#04c582" FontSize="18" Content="Submit Tracking ID" Margin="628,536,0,0" VerticalAlignment="Top" Width="166"/>
+            
+            
+
+
+
+
+        </Grid>
+    </ScrollViewer>
+
+</Window>

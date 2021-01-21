@@ -1,0 +1,34 @@
+﻿<Window x:Class="Login_Registered.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Login_Registered"
+        mc:Ignorable="d"
+        Title="Registration" Left="500" Top="220" ResizeMode="NoResize" Height="480" Width="400" FontSize="14" Background="#04c582" Icon="C:\Users\abhi\Desktop\hcci_logo.jpg">
+    <Border Background="black" CornerRadius="20" Margin="20">
+        <StackPanel Margin="20">
+
+            <Button Foreground="White" HorizontalAlignment="Left" Width="50"  Background="#04c582" Click="Refresh_Click" Cursor="Hand" FontSize="10" Content="Refresh" HorizontalContentAlignment="center"/>
+
+            <Label Name="status" FontSize="10" Foreground="White" HorizontalContentAlignment="Right"/>
+
+            <Label Foreground="White" Content="Registration" FontSize="25" HorizontalAlignment="Center"/>
+            <Separator></Separator>
+
+            <Label Foreground="White" Content="First Name"/>
+            <TextBox Name="firstname" Background="#545d6a" Foreground="White" FontSize="18" />
+
+            <Label Foreground="White" Content="Last Name"/>
+            <TextBox Name="lastname" Background="#545d6a" Foreground="White" FontSize="18"/>
+
+            <Label Foreground="White" Content="Username"/>
+            <TextBox Name="username" Background="#545d6a" Foreground="White" FontSize="18"/>
+
+            <Label Foreground="White" Content="Password"/>
+            <PasswordBox Name="password" Background="#545d6a" Foreground="White" FontSize="18"/>
+
+            <Button FontSize="18" Margin="100 10" Name="register" Foreground="White" Background="#04c582" Content="Register" Click="Register_Click" Cursor="Hand"/>
+        </StackPanel>
+    </Border>
+</Window>

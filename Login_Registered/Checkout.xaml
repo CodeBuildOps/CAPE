@@ -1,0 +1,149 @@
+﻿<Window x:Class="Login_Registered.Checkout"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Login_Registered"
+        mc:Ignorable="d"
+        Title="Purchased Checkout" 
+        WindowStartupLocation="CenterScreen" WindowState="Maximized"
+        WindowStyle="ThreeDBorderWindow" Background="#04c582" Icon="C:\Users\abhi\Desktop\hcci_logo.jpg" Height="880" Width="1320">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+
+        <Grid Margin="20" Height="800" Background="Black">
+
+            <!--Refresh Button-->
+            <Button Foreground="White" Width="77" Background="Brown" Click="Refresh_Click" Cursor="Hand" FontSize="15" Content="Refresh" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" />
+
+            <!--Back to Purchased Checkout Entries-->
+            <Button Foreground="White" Width="171" Background="HotPink" Click="EditDashboard_Click" Cursor="Hand" FontSize="15" Content="Edit Product/Tracking" HorizontalAlignment="Left" Margin="99,0,0,766" VerticalAlignment="Bottom" />
+
+            <!--Back to Abandoned Checkout Entries-->
+            <Button Foreground="White" Width="207" Background="Red" Click="BackToAbandonedCheckout_Click" Cursor="Hand" FontSize="15" Content="Abandoned Checkout Entries" HorizontalAlignment="Left" Margin="290,10,0,0" VerticalAlignment="Top" />
+
+            <!--Back to Dashboard button-->
+            <Button Foreground="DarkGreen" Width="138" Background="Yellow" Click="BackToDashboard_Click" Cursor="Hand" FontSize="15" Content="Dashboard" HorizontalAlignment="Left" Margin="515,8,0,768" />
+
+            <!--Logout Button-->
+            <Button HorizontalAlignment="Right" FontSize="18" Foreground="White" Width="72" Background="#04c582" Content="Logout" Margin="0,42,25,0" VerticalAlignment="Top" Click="Logout_Click"/>
+
+            <!--Connected/Not connected status-->
+            <Label HorizontalAlignment="Right" Content="Conneted / Not-Connected" Name="status" FontSize="12" Foreground="White" Margin="0,75,25,690"  />
+
+            <!--Main Heading (Purchased Checkout)-->
+            <Label Foreground="White" FontSize="25" Content="Purchased Checkout" HorizontalContentAlignment="Center" Margin="452,37,432,0" VerticalAlignment="Top" Width="395"/>
+
+
+            <!-- Fullname-->
+            <Label FontSize="18" Foreground="White" Content="Full Name" HorizontalAlignment="Left" Margin="36,136,0,0" VerticalAlignment="Top" Width="144"/>
+            <TextBox Name="FullName" Background="#545d6a" Foreground="White" FontSize="18" HorizontalAlignment="Left" Height="23" Margin="203,143,0,0" VerticalAlignment="Top" Width="359"/>
+
+            <!-- Email-->
+            <Label FontSize="18" Foreground="White" Content="Email" HorizontalAlignment="Left" Margin="36,192,0,0" VerticalAlignment="Top" Width="144"/>
+            <TextBox Name="Email" Background="#545d6a" Foreground="White" FontSize="18" HorizontalAlignment="Left" Height="23" Margin="203,195,0,0" VerticalAlignment="Top" Width="359"/>
+
+            <!--Phone Number-->
+            <Label FontSize="18" Foreground="White" Content="Phone Number" HorizontalAlignment="Left" Margin="36,245,0,0" VerticalAlignment="Top" Width="144"/>
+            <TextBox FontSize="18" Name="PhoneNumber" Background="#545d6a" Foreground="White" HorizontalAlignment="Left" Height="23" Margin="203,252,0,0" VerticalAlignment="Top" Width="359"/>
+
+            <!--Address-->
+            <Label FontSize="18" Foreground="White" Content="Address" HorizontalAlignment="Left" Margin="36,305,0,0" VerticalAlignment="Top" Width="144"/>
+            <TextBox FontSize="18" Name="Address" Background="#545d6a" Foreground="White" HorizontalAlignment="Left" Height="23" Margin="203,307,0,0" VerticalAlignment="Top" Width="359"/>
+
+            <!--City-->
+            <Label FontSize="18" Foreground="White" Content="City" HorizontalAlignment="Left" Margin="36,353,0,0" VerticalAlignment="Top" Width="144"/>
+            <TextBox FontSize="18" Name="City" Background="#545d6a" Foreground="White" HorizontalAlignment="Left" Height="23" Margin="203,360,0,0" VerticalAlignment="Top" Width="359"/>
+
+            <!--Country-->
+            <Label FontSize="18" Foreground="White" Content="Country" HorizontalAlignment="Left" Margin="36,405,0,0" VerticalAlignment="Top" Width="144"/>
+            <TextBox FontSize="18" Name="Country" Foreground="White" Background="#545d6a" HorizontalAlignment="Left" Height="23" Margin="203,412,0,0"  VerticalAlignment="Top" Width="359"/>
+
+            <!--Province-->
+            <Label FontSize="18" Foreground="White" Content="Province" HorizontalAlignment="Left" Margin="36,456,0,0" VerticalAlignment="Top" Width="144" Height="44"/>
+            <TextBox FontSize="18" Name="Province" Foreground="White" Background="#545d6a" HorizontalAlignment="Left" Height="23" Margin="203,458,0,0" VerticalAlignment="Top" Width="359"/>
+
+            <!--Zip Code-->
+            <Label FontSize="18" Foreground="White" Content="Zip Code" HorizontalAlignment="Left" Margin="36,505,0,0" VerticalAlignment="Top" Width="144"/>
+            <TextBox FontSize="18" Name="ZipCode" Foreground="White" Background="#545d6a" HorizontalAlignment="Left" Height="23" Margin="203,512,0,0" VerticalAlignment="Top" Width="359"/>
+
+            <!---Special Note-->
+            <Label FontSize="18" Foreground="White" Content="Special Note" HorizontalAlignment="Left" Margin="36,572,0,0" VerticalAlignment="Top" Width="119"/>
+            <TextBox TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" FontSize="18" Name="SpecialNote" Foreground="White" Background="#545d6a" HorizontalAlignment="Left" Margin="203,568,0,0" VerticalAlignment="Top" Height="180" Width="359"/>
+
+
+            <!---**********************************************-->
+
+            <!--Order Number-->
+            <Label FontSize="18" Foreground="White" Content="Order Number" HorizontalAlignment="Left" Margin="626,140,0,0" VerticalAlignment="Top" Width="219"/>
+            <TextBox Name="OrderNumber" Background="#545d6a" Foreground="White" FontSize="18" HorizontalAlignment="Left" Height="23" Margin="928,147,0,0" VerticalAlignment="Top" Width="201"/>
+
+            <!--Date / Time-->
+            <Label FontSize="18" Foreground="White" Content="Date / Time" HorizontalAlignment="Left" Margin="626,188,0,0" VerticalAlignment="Top" Width="219"/>
+            <TextBox Name="DateTime" Background="#545d6a" Foreground="White" FontSize="18" HorizontalAlignment="Left" Height="23" Margin="928,195,0,0" VerticalAlignment="Top" Width="201"/>
+
+            <!--Purchased Product Name-->
+            <Label FontSize="18" Foreground="White" Content="Purchased Product Name" HorizontalAlignment="Left" Margin="626,251,0,0" VerticalAlignment="Top" Width="219"/>
+            <RadioButton FontSize="18" Foreground="White" Content="Blanket Sauna - BS 100" HorizontalAlignment="Left" Margin="928,252,0,0" VerticalAlignment="Top" Height="28" Width="201"/>
+            <RadioButton FontSize="18" Foreground="White" Content="Blanket Sauna - BS 103" HorizontalAlignment="Left" Margin="928,289,0,0" VerticalAlignment="Top" Height="28" Width="201"/>
+            <RadioButton FontSize="18" Foreground="White" Content="Blanket Sauna - BS 106" HorizontalAlignment="Left" Margin="928,321,0,0" VerticalAlignment="Top" Height="28" Width="201"/>
+
+
+            <!--Product Variant-->
+            <Label FontSize="18" Foreground="White" Content="Product Variant" HorizontalAlignment="Left" Margin="626,353,0,0" VerticalAlignment="Top" Width="219"/>
+            <TextBox Name="ProductVariant" Background="#545d6a" Foreground="White" FontSize="18" HorizontalAlignment="Left" Height="23" Margin="928,360,0,0" VerticalAlignment="Top" Width="201"/>
+
+            <!--Quantity Purchased-->
+            <Label FontSize="18" Foreground="White" Content="Quantity Purchased" HorizontalAlignment="Left" Margin="626,405,0,0" VerticalAlignment="Top" Width="219"/>
+            <TextBox Name="QuantityPurchased" Background="#545d6a" Foreground="White" FontSize="18" HorizontalAlignment="Left" Height="23" Margin="928,412,0,0" VerticalAlignment="Top" Width="201"/>
+
+            <!--Original Amount (MRP)-->
+            <Label FontSize="18" Foreground="White" Content="Original Amount (MRP)" HorizontalAlignment="Left" Margin="626,457,0,0" VerticalAlignment="Top" Width="219"/>
+            <TextBox Name="OriginalAmount" Background="#545d6a" Foreground="White" FontSize="18" HorizontalAlignment="Left" Height="23" Margin="928,464,0,0" VerticalAlignment="Top" Width="201"/>
+
+            <!--Purchased Amoun-->
+            <Label FontSize="18" Foreground="White" Content="Purchased Amount" HorizontalAlignment="Left" Margin="626,505,0,0" VerticalAlignment="Top" Width="219"/>
+            <TextBox Name="PurchasedAmount" Background="#545d6a" Foreground="White" FontSize="18" HorizontalAlignment="Left" Height="23" Margin="928,512,0,0" VerticalAlignment="Top" Width="201"/>
+
+
+            <!--Discount Given-->
+            <Label FontSize="18" Foreground="White" Content="Discount Given" HorizontalAlignment="Left" Margin="626,563,0,0" VerticalAlignment="Top" Width="219"/>
+            <TextBox Name="DiscountGiven" Background="#545d6a" Foreground="White" FontSize="18" HorizontalAlignment="Left" Height="23" Margin="928,570,0,0" VerticalAlignment="Top" Width="201"/>
+
+            <!--Purchased Amount after Discount-->
+            <Label FontSize="18" Foreground="White" Content="Purchased Amount after Discount" HorizontalAlignment="Left" Margin="626,611,0,0" VerticalAlignment="Top" Width="299"/>
+            <TextBox Name="PurchasedAmountAfterDiscount" Background="#545d6a" Foreground="White" FontSize="18" HorizontalAlignment="Left" Height="23" Margin="930,622,0,0" VerticalAlignment="Top" Width="199"/>
+
+
+            <!--Change Variant button-->
+            <Button HorizontalAlignment="Left" Click="ChangeVariant_Click"  Cursor="Hand" Height="29" Foreground="White" Background="Red" FontSize="18" Content="Change Variant" Margin="1145,358,0,0" VerticalAlignment="Top" Width="134"/>
+
+            <!--Original Amount Change-->
+            <Button HorizontalAlignment="Left" Click="OriginalAmount_Click"  Cursor="Hand" Height="29" Foreground="White" Background="Red" FontSize="18" Content="Change" Margin="1145,464,0,0" VerticalAlignment="Top" Width="104"/>
+
+            <!--Purchased Amount Change-->
+            <Button HorizontalAlignment="Left" Click="PurchasedAmount_Click"  Cursor="Hand" Height="29" Foreground="White" Background="Red" FontSize="18" Content="Change" Margin="1145,512,0,0" VerticalAlignment="Top" Width="104"/>
+
+            <!--Purchased Amount after Discount change-->
+            <Button HorizontalAlignment="Left" Click="PurchasedAmountAfterDiscount_Click"  Cursor="Hand" Height="29" Foreground="White" Background="Red" FontSize="18" Content="Change" Margin="1145,616,0,0" VerticalAlignment="Top" Width="104"/>
+
+
+            <!--Submit-->
+            <Button HorizontalAlignment="Left" Click="Submit_Click"  Cursor="Hand" Height="36" Foreground="White" Background="#04c582" FontSize="18" Content="Submit" Margin="626,712,0,0" VerticalAlignment="Top" Width="122"/>
+
+
+
+            <!--Profile Image-->
+            <Image  Name="ProfileSession" HorizontalAlignment="Left" Height="100" Margin="978,10,0,0" VerticalAlignment="Top" Width="100"/>
+
+            <!---UsernameSession-->
+            <Label Name="UsernameSession" FontSize="18" Foreground="White" Content="Username_Session" HorizontalContentAlignment="Right" HorizontalAlignment="Right" Margin="0,10,25,0" VerticalAlignment="Top" Width="151"/>
+
+
+
+
+        </Grid>
+    </ScrollViewer>
+
+</Window>
+
