@@ -43,10 +43,10 @@
 
 
             <!--Choose Product-->
-            <Label FontSize="18" Foreground="White" Content="Choose Product" HorizontalAlignment="Left" Margin="27,160,0,0" VerticalAlignment="Top" Width="219"/>
-            <RadioButton FontSize="18" Foreground="White" Content="Blanket Sauna - BS 100" HorizontalAlignment="Left" Margin="324,166,0,0" VerticalAlignment="Top" Height="28" Width="201"/>
-            <RadioButton FontSize="18" Foreground="White" Content="Blanket Sauna - BS 103" HorizontalAlignment="Left" Margin="326,199,0,0" VerticalAlignment="Top" Height="28" Width="201"/>
-            <RadioButton FontSize="18" Foreground="White" Content="Blanket Sauna - BS 106" HorizontalAlignment="Left" Margin="326,232,0,0" VerticalAlignment="Top" Height="28" Width="201"/>
+            <Label FontSize="18" Foreground="White" Content="Choose Product" HorizontalAlignment="Left" Margin="34,114,0,0" VerticalAlignment="Top" Width="219"/>
+            <RadioButton Name="BS100" GroupName="BS" Checked = "BSCheck" FontSize="18" Foreground="White" Content="Blanket Sauna - BS 100, Far Infrared Sauna Blanket" HorizontalAlignment="Left" Margin="34,167,0,0" VerticalAlignment="Top" Height="28" Width="425"/>
+            <RadioButton Name="BS103" GroupName="BS" Checked = "BSCheck" FontSize="18" Foreground="White" Content="Blanket Sauna - BS 103, Jade and Tourmaline Stones" HorizontalAlignment="Left" Margin="34,200,0,0" VerticalAlignment="Top" Height="28" Width="550"/>
+            <RadioButton Name="BS106" GroupName="BS" Checked = "BSCheck" FontSize="18" Foreground="White" Content="Blanket Sauna - BS 106, Bain Stones, Negative Ionic Cloth and Photon Lights" HorizontalAlignment="Left" Margin="34,233,0,0" VerticalAlignment="Top" Height="28" Width="577"/>
 
             <Separator Background="Yellow" HorizontalAlignment="Left" Height="20" Margin="34,282,0,0" VerticalAlignment="Top" Width="534"/>
 
@@ -71,7 +71,7 @@
             <!---**********************************************-->
 
 
-            <Separator Background="Yellow" Height="20" Margin="302,427,443,0" VerticalAlignment="Top" Width="600" RenderTransformOrigin="0.5,0.5">
+            <Separator Background="Yellow" Height="20" Margin="313,370,287,0" VerticalAlignment="Top" Width="600" RenderTransformOrigin="0.5,0.5">
                 <Separator.RenderTransform>
                     <TransformGroup>
                         <RotateTransform Angle="90"/>
@@ -89,7 +89,7 @@
             <TextBox Name="OrderNumber" Background="#545d6a" Foreground="White" FontSize="18" HorizontalAlignment="Left" Height="23" Margin="877,160,0,0" VerticalAlignment="Top" Width="201"/>
 
             <!--Display the searched Order Id details-->
-            <TextBlock FontSize="15" Foreground="Red" Background="Beige" HorizontalAlignment="Left" Margin="628,219,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="125" Width="547"/>
+            <TextBlock Name="SearchedText" FontSize="15" Foreground="Red" Background="Beige" HorizontalAlignment="Left" Margin="628,219,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="125" Width="547"/>
 
 
             <!--Tracking Service Name-->
@@ -102,8 +102,8 @@
 
             <!--Submit button for Tracking ID-->
             <Button HorizontalAlignment="Left" Click="SubmitTracking_Click"  Cursor="Hand" Height="36" Foreground="White" Background="#04c582" FontSize="18" Content="Submit Tracking ID" Margin="628,536,0,0" VerticalAlignment="Top" Width="166"/>
-            
-            
+
+
 
 
 

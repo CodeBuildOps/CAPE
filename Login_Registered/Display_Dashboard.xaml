@@ -36,7 +36,7 @@
             <Label Foreground="White" FontSize="25" Content="Display Dashboard" HorizontalContentAlignment="Center" Margin="354,27,334,0" VerticalAlignment="Top" Width="395"/>
 
             <!--Profile Image-->
-            <Image  Name="ProfileSession" HorizontalAlignment="Left" Height="100" Margin="922,10,0,0" VerticalAlignment="Top" Width="100"/>
+            <Image  Name="ProfileSession" HorizontalAlignment="Left" Height="100" Margin="1037,10,0,0" VerticalAlignment="Top" Width="100"/>
 
 
             <!---UsernameSession-->
@@ -48,21 +48,21 @@
             <!--Your Products-->
             <Label FontSize="18" Foreground="White" Content="Your Products" HorizontalAlignment="Left" Margin="10,76,0,0" VerticalAlignment="Top" Width="219"/>
             <!--BS 100-->
-            <Image HorizontalAlignment="Left" Height="100" Margin="10,119,0,0" VerticalAlignment="Top" Width="162"/>
+            <Image Stretch="Fill" Source="C:\Users\abhi\Desktop\CAPE\Images\BS100.png" HorizontalAlignment="Left" Height="100" Margin="10,119,0,0" VerticalAlignment="Top" Width="162"/>
             <Label FontSize="18" Foreground="White" Content="BS 100" HorizontalAlignment="Left" Margin="10,219,0,0" VerticalAlignment="Top" Width="205"/>
             <Label FontSize="18" Foreground="White" Content="Original Price : $USD" HorizontalAlignment="Left" Margin="10,253,0,0" VerticalAlignment="Top" Width="205"/>
             <Label FontSize="18" Foreground="White" Content="Customer Price : $USD" HorizontalAlignment="Left" Margin="10,284,0,0" VerticalAlignment="Top" Width="205"/>
 
 
             <!--BS 103-->
-            <Image HorizontalAlignment="Left" Height="100" Margin="233,119,0,0" VerticalAlignment="Top" Width="164" RenderTransformOrigin="0.897,0.494"/>
-            <Label FontSize="18" Foreground="White" Content="BS 103" HorizontalAlignment="Left" Margin="233,219,0,0" VerticalAlignment="Top" Width="100"/>
-            <Label FontSize="18" Foreground="White" Content="Original Price : $USD" HorizontalAlignment="Left" Margin="233,253,0,0" VerticalAlignment="Top" Width="205"/>
-            <Label FontSize="18" Foreground="White" Content="Customer Price : $USD" HorizontalAlignment="Left" Margin="233,284,0,0" VerticalAlignment="Top" Width="205"/>
+            <Image Stretch="Fill" Source="C:\Users\abhi\Desktop\CAPE\Images\BS103.png" HorizontalAlignment="Left" Height="100" Margin="218,119,0,0" VerticalAlignment="Top" Width="164" RenderTransformOrigin="0.897,0.494"/>
+            <Label FontSize="18" Foreground="White" Content="BS 103" HorizontalAlignment="Left" Margin="218,219,0,0" VerticalAlignment="Top" Width="100"/>
+            <Label FontSize="18" Foreground="White" Content="Original Price : $USD" HorizontalAlignment="Left" Margin="217,253,0,0" VerticalAlignment="Top" Width="205"/>
+            <Label FontSize="18" Foreground="White" Content="Customer Price : $USD" HorizontalAlignment="Left" Margin="218,284,0,0" VerticalAlignment="Top" Width="205"/>
 
 
             <!--BS 106-->
-            <Image HorizontalAlignment="Left" Height="100" Margin="427,114,0,0" VerticalAlignment="Top" Width="165"/>
+            <Image Stretch="Fill" Source="C:\Users\abhi\Desktop\CAPE\Images\BS106.jpg" HorizontalAlignment="Left" Height="100" Margin="427,114,0,0" VerticalAlignment="Top" Width="165"/>
             <Label FontSize="18" Foreground="White" Content="BS 106" HorizontalAlignment="Left" Margin="427,219,0,0" VerticalAlignment="Top" Width="100"/>
             <Label FontSize="18" Foreground="White" Content="Original Price : $USD" HorizontalAlignment="Left" Margin="427,253,0,0" VerticalAlignment="Top" Width="205"/>
             <Label FontSize="18" Foreground="White" Content="Customer Price : $USD" HorizontalAlignment="Left" Margin="427,284,0,0" VerticalAlignment="Top" Width="205"/>

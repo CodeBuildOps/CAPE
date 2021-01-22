@@ -8,23 +8,23 @@
         mc:Ignorable="d"
         Title="Purchased Checkout" 
         WindowStartupLocation="CenterScreen" WindowState="Maximized"
-        WindowStyle="ThreeDBorderWindow" Background="#04c582" Icon="C:\Users\abhi\Desktop\hcci_logo.jpg" Height="880" Width="1320">
+        WindowStyle="ThreeDBorderWindow" Background="#04c582" Icon="C:\Users\abhi\Desktop\hcci_logo.jpg" Height="902" Width="1310">
 
     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
 
-        <Grid Margin="20" Height="800" Background="Black">
+        <Grid Height="844" Background="Black">
 
             <!--Refresh Button-->
             <Button Foreground="White" Width="77" Background="Brown" Click="Refresh_Click" Cursor="Hand" FontSize="15" Content="Refresh" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" />
 
             <!--Back to Purchased Checkout Entries-->
-            <Button Foreground="White" Width="171" Background="HotPink" Click="EditDashboard_Click" Cursor="Hand" FontSize="15" Content="Edit Product/Tracking" HorizontalAlignment="Left" Margin="99,0,0,766" VerticalAlignment="Bottom" />
+            <Button Foreground="White" Width="171" Background="HotPink" Click="EditDashboard_Click" Cursor="Hand" FontSize="15" Content="Edit Product/Tracking" HorizontalAlignment="Left" Margin="99,10,0,0" VerticalAlignment="Top" Height="27" />
 
             <!--Back to Abandoned Checkout Entries-->
-            <Button Foreground="White" Width="207" Background="Red" Click="BackToAbandonedCheckout_Click" Cursor="Hand" FontSize="15" Content="Abandoned Checkout Entries" HorizontalAlignment="Left" Margin="290,10,0,0" VerticalAlignment="Top" />
+            <Button Foreground="White" Width="207" Background="Red" Click="BackToAbandonedCheckout_Click" Cursor="Hand" FontSize="15" Content="Abandoned Checkout Entries" HorizontalAlignment="Left" Margin="290,10,0,0" VerticalAlignment="Top" Height="27" />
 
             <!--Back to Dashboard button-->
-            <Button Foreground="DarkGreen" Width="138" Background="Yellow" Click="BackToDashboard_Click" Cursor="Hand" FontSize="15" Content="Dashboard" HorizontalAlignment="Left" Margin="515,8,0,768" />
+            <Button Foreground="DarkGreen" Width="135" Background="Yellow" Click="BackToDashboard_Click" Cursor="Hand" FontSize="15" Content="Dashboard" HorizontalAlignment="Left" VerticalAlignment="Top" Height="27" Margin="510,8,0,0"  />
 
             <!--Logout Button-->
             <Button HorizontalAlignment="Right" FontSize="18" Foreground="White" Width="72" Background="#04c582" Content="Logout" Margin="0,42,25,0" VerticalAlignment="Top" Click="Logout_Click"/>
@@ -70,7 +70,7 @@
 
             <!---Special Note-->
             <Label FontSize="18" Foreground="White" Content="Special Note" HorizontalAlignment="Left" Margin="36,572,0,0" VerticalAlignment="Top" Width="119"/>
-            <TextBox TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" FontSize="18" Name="SpecialNote" Foreground="White" Background="#545d6a" HorizontalAlignment="Left" Margin="203,568,0,0" VerticalAlignment="Top" Height="180" Width="359"/>
+            <TextBox TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" FontSize="18" Name="SpecialNote" Foreground="White" Background="#545d6a" HorizontalAlignment="Left" Margin="203,568,0,0" VerticalAlignment="Top" Height="92" Width="359"/>
 
 
             <!---**********************************************-->
@@ -85,9 +85,9 @@
 
             <!--Purchased Product Name-->
             <Label FontSize="18" Foreground="White" Content="Purchased Product Name" HorizontalAlignment="Left" Margin="626,251,0,0" VerticalAlignment="Top" Width="219"/>
-            <RadioButton FontSize="18" Foreground="White" Content="Blanket Sauna - BS 100" HorizontalAlignment="Left" Margin="928,252,0,0" VerticalAlignment="Top" Height="28" Width="201"/>
-            <RadioButton FontSize="18" Foreground="White" Content="Blanket Sauna - BS 103" HorizontalAlignment="Left" Margin="928,289,0,0" VerticalAlignment="Top" Height="28" Width="201"/>
-            <RadioButton FontSize="18" Foreground="White" Content="Blanket Sauna - BS 106" HorizontalAlignment="Left" Margin="928,321,0,0" VerticalAlignment="Top" Height="28" Width="201"/>
+            <RadioButton Name="BS100" GroupName="BS" Checked = "BSCheck" FontSize="18" Foreground="White" Content="Blanket Sauna - BS 100, Far Infrared Sauna Blanket" HorizontalAlignment="Left" Margin="928,252,0,0" VerticalAlignment="Top" Height="28" Width="304"/>
+            <RadioButton Name="BS103" GroupName="BS" Checked = "BSCheck" FontSize="18" Foreground="White" Content="Blanket Sauna - BS 103, Jade and Tourmaline Stones" HorizontalAlignment="Left" Margin="928,289,0,0" VerticalAlignment="Top" Height="28" Width="304"/>
+            <RadioButton Name="BS106" GroupName="BS" Checked = "BSCheck" FontSize="18" Foreground="White" Content="Blanket Sauna - BS 106, Bain Stones, Negative Ionic Cloth and Photon Lights" HorizontalAlignment="Left" Margin="928,321,0,0" VerticalAlignment="Top" Height="28" Width="304"/>
 
 
             <!--Product Variant-->
@@ -130,8 +130,7 @@
 
 
             <!--Submit-->
-            <Button HorizontalAlignment="Left" Click="Submit_Click"  Cursor="Hand" Height="36" Foreground="White" Background="#04c582" FontSize="18" Content="Submit" Margin="626,712,0,0" VerticalAlignment="Top" Width="122"/>
-
+            <Button HorizontalAlignment="Left" Click="Submit_Click"  Cursor="Hand" Height="36" Foreground="White" Background="#04c582" FontSize="18" Content="Submit" Margin="626,650,0,0" VerticalAlignment="Top" Width="122"/>
 
 
             <!--Profile Image-->
@@ -140,6 +139,9 @@
             <!---UsernameSession-->
             <Label Name="UsernameSession" FontSize="18" Foreground="White" Content="Username_Session" HorizontalContentAlignment="Right" HorizontalAlignment="Right" Margin="0,10,25,0" VerticalAlignment="Top" Width="151"/>
 
+
+            <!---Display All Abandoned Checkout-->
+            <DataGrid Name="DisplayPurchased" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible" FontSize="12" HorizontalAlignment="Right" Height="114" Margin="0,703,53,0" VerticalAlignment="Top" Width="1212"/>
 
 
 

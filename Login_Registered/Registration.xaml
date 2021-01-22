@@ -17,11 +17,11 @@
             <Label Foreground="White" Content="Registration" FontSize="25" HorizontalAlignment="Center"/>
             <Separator></Separator>
 
-            <Label Foreground="White" Content="First Name"/>
-            <TextBox Name="firstname" Background="#545d6a" Foreground="White" FontSize="18" />
+            <Label Foreground="White" Content="Full Name"/>
+            <TextBox Name="fullname" Background="#545d6a" Foreground="White" FontSize="18" />
 
-            <Label Foreground="White" Content="Last Name"/>
-            <TextBox Name="lastname" Background="#545d6a" Foreground="White" FontSize="18"/>
+            <Label Foreground="White" Content="Email"/>
+            <TextBox Name="email" Background="#545d6a" Foreground="White" FontSize="18"/>
 
             <Label Foreground="White" Content="Username"/>
             <TextBox Name="username" Background="#545d6a" Foreground="White" FontSize="18"/>

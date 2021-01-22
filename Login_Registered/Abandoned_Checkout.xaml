@@ -8,11 +8,11 @@
         mc:Ignorable="d"
         Title="Abandoned Checkout" 
         WindowStartupLocation="CenterScreen" WindowState="Maximized"
-        WindowStyle="ThreeDBorderWindow" Background="red" Icon="C:\Users\abhi\Desktop\hcci_logo.jpg" Height="800" Width="1200">
+        WindowStyle="ThreeDBorderWindow" Background="red" Icon="C:\Users\abhi\Desktop\hcci_logo.jpg" Height="700" Width="1200">
 
     <ScrollViewer VerticalScrollBarVisibility="Auto">
 
-        <Grid Background="Black" Height="740" Margin="12">
+        <Grid Background="Black" Height="650" Margin="20">
 
             <!--Refresh Button-->
             <Button Foreground="White" Width="77" Background="Brown" Click="Refresh_Click" Cursor="Hand" FontSize="15" Content="Refresh" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" />
@@ -37,7 +37,7 @@
 
             <!-- Fullname-->
             <Label FontSize="18" Foreground="White" Content="Full Name" HorizontalAlignment="Left" Margin="36,84,0,0" VerticalAlignment="Top" Width="144"/>
-            <TextBox Name="Fullname" Background="#545d6a" Foreground="White" FontSize="18" HorizontalAlignment="Left" Height="23" Margin="200,95,0,0" VerticalAlignment="Top" Width="359"/>
+            <TextBox Name="FullName" Background="#545d6a" Foreground="White" FontSize="18" HorizontalAlignment="Left" Height="23" Margin="200,95,0,0" VerticalAlignment="Top" Width="359"/>
 
             <!-- Email-->
             <Label FontSize="18" Foreground="White" Content="Email" HorizontalAlignment="Left" Margin="36,147,0,0" VerticalAlignment="Top" Width="144"/>
@@ -51,9 +51,9 @@
             <Label FontSize="18" Foreground="White" Content="Product Left" HorizontalAlignment="Left" Margin="36,253,0,0" VerticalAlignment="Top" Width="144"/>
 
             <!--Product Left Radio button-->
-            <RadioButton FontSize="18" Foreground="White" Content="Blanket Sauna - BS 100" HorizontalAlignment="Left" Margin="200,254,0,0" VerticalAlignment="Top" Height="28" Width="359"/>
-            <RadioButton FontSize="18" Foreground="White" Content="Blanket Sauna - BS 103" HorizontalAlignment="Left" Margin="200,282,0,0" VerticalAlignment="Top" Height="28" Width="359"/>
-            <RadioButton FontSize="18" Foreground="White" Content="Blanket Sauna - BS 106" HorizontalAlignment="Left" Margin="200,310,0,0" VerticalAlignment="Top" Height="28" Width="359"/>
+            <RadioButton Name="BS100" GroupName="BS" Checked = "BSCheck" FontSize="18" Foreground="White" Content="Blanket Sauna - BS 100, Far Infrared Sauna Blanket" HorizontalAlignment="Left" Margin="200,254,0,0" VerticalAlignment="Top" Height="28" Width="486"/>
+            <RadioButton Name="BS103" GroupName="BS" Checked = "BSCheck" FontSize="18" Foreground="White" Content="Blanket Sauna - BS 103, Jade and Tourmaline Stones" HorizontalAlignment="Left" Margin="200,282,0,0" VerticalAlignment="Top" Height="28" Width="835"/>
+            <RadioButton Name="BS106" GroupName="BS" Checked = "BSCheck" FontSize="18" Foreground="White" Content="Blanket Sauna - BS 106, Bain Stones, Negative Ionic Cloth and Photon Lights" HorizontalAlignment="Left" Margin="200,310,0,0" VerticalAlignment="Top" Height="28" Width="629"/>
 
             <!--Product variant(Color) left-->
             <Label FontSize="18" Foreground="White" Content="Product Variant" HorizontalAlignment="Left" Margin="36,353,0,0" VerticalAlignment="Top" Width="144"/>
@@ -65,10 +65,10 @@
 
             <!---Special Note-->
             <Label FontSize="18" Foreground="White" Content="Special Note" HorizontalAlignment="Left" Margin="36,472,0,0" VerticalAlignment="Top" Width="119"/>
-            <TextBox TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" FontSize="18" Name="SpecialNote" Foreground="White" Background="#545d6a" HorizontalAlignment="Left" Margin="203,472,0,0" VerticalAlignment="Top" Height="180" Width="359"/>
+            <TextBox TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" FontSize="18" Name="SpecialNote" Foreground="White" Background="#545d6a" HorizontalAlignment="Left" Margin="203,472,0,0" VerticalAlignment="Top" Height="102" Width="359"/>
 
             <!--Submit-->
-            <Button HorizontalAlignment="Left" Click="Submit_Click"  Cursor="Hand" Height="36" Foreground="White" Background="#04c582" FontSize="18" Content="Submit" Margin="58,616,0,0" VerticalAlignment="Top" Width="122"/>
+            <Button Name="Submit" HorizontalAlignment="Left" Click="Submit_Click"  Cursor="Hand" Height="36" Foreground="White" Background="#04c582" FontSize="18" Content="Submit" Margin="567,538,0,0" VerticalAlignment="Top" Width="84"/>
 
             <!--**************************************************************-->
 
@@ -79,10 +79,10 @@
             <Label Name="UsernameSession" FontSize="18" Foreground="White" Content="Username_Session" HorizontalContentAlignment="Right" HorizontalAlignment="Right" Margin="0,10,25,0" VerticalAlignment="Top" Width="151"/>
 
             <!---Display All Abandoned Checkout-->
-            <DataGrid VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible" FontSize="12" HorizontalAlignment="Right" Height="532" Margin="0,115,25,0" VerticalAlignment="Top" Width="460"/>
+            <DataGrid Name="DisplayAbandoned" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible" FontSize="12" HorizontalAlignment="Right" Height="172" Margin="0,115,25,0" VerticalAlignment="Top" Width="460"/>
 
             <!---View all Abandoned data button-->
-            <Button Click="ViewAll_Click" Cursor="Hand" Height="36" Foreground="White" Background="#04c582" FontSize="18" Name="ViewAll" Content="View All" HorizontalAlignment="Right" Margin="0,652,25,0" VerticalAlignment="Top" Width="100"/>
+            <Button Click="ViewAll_Click" Cursor="Hand" Height="36" Foreground="White" Background="#04c582" FontSize="18" Name="ViewAll" Content="View All" HorizontalAlignment="Right" Margin="0,310,25,0" VerticalAlignment="Top" Width="72"/>
 
 
 

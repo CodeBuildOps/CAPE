@@ -34,6 +34,7 @@ namespace Login_Registered
                 {
                     status.Content = "Connected";
                     status.Foreground = new SolidColorBrush(Color.FromRgb(0, 255, 0));
+                    //Calling the function to display the grid
                     FillDataGrid();
                 }
                 else
@@ -52,13 +53,22 @@ namespace Login_Registered
         }
         private void FillDataGrid()
         {
-            String query = "SELECT * FROM users";
-            MySqlCommand sqlcmd = new MySqlCommand(query, conn);
-            MySqlDataAdapter adapter = new MySqlDataAdapter(sqlcmd);
+            try
+            {
+                String query = "SELECT * FROM users";
+                MySqlCommand sqlcmd = new MySqlCommand(query, conn);
+                MySqlDataAdapter adapter = new MySqlDataAdapter(sqlcmd);
 
-            DataTable dt = new DataTable("Employee");
-            adapter.Fill(dt);
-            all_members.ItemsSource = dt.DefaultView;
+                DataTable dt = new DataTable("Employee");
+                adapter.Fill(dt);
+                all_members.ItemsSource = dt.DefaultView;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errors in Displaying Users Table :" + ex);
+
+            }
+
 
 
         }

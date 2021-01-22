@@ -35,15 +35,14 @@ namespace Login_Registered
                 }
                 else
                 {
-                    status.Content = "Something wrong";
+                    status.Content = "Something wrong, Refresh";
                     status.Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 255));
                 }
 
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(ex.Message);
-                status.Content = "Not-Connected (Exception)";
+                status.Content = "Not-Connected, Refresh";
                 status.Foreground = new SolidColorBrush(Color.FromRgb(255, 0, 0));
             }
         }
@@ -52,8 +51,13 @@ namespace Login_Registered
         {
             try
             {
-                String query = "INSERT INTO users (username,password,firstname,lastname) VALUES ('"+username.Text+"'," +
-                    "'" + password.Password + "','" + firstname.Text + "','" + lastname.Text + "')";
+
+                if (conn.State == System.Data.ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
+                String query = "INSERT INTO users (username,password,fullname,email) VALUES ('"+username.Text+"'," +
+                    "'" + password.Password + "','" + fullname.Text + "','" + email.Text + "')";
 
                 MySqlCommand sqlcmd = new MySqlCommand(query, conn);
                 if (sqlcmd.ExecuteNonQuery() == 1)
