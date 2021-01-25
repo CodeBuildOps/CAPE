@@ -95,6 +95,10 @@ namespace Login_Registered
                 MessageBox.Show("Errors in Displaying Abandoned Checkout Table:" + ex);
 
             }
+            finally
+            {
+                conn.Close();
+            }
 
         }
 

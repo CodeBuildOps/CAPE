@@ -143,6 +143,10 @@ namespace Login_Registered
                 MessageBox.Show("Errors in Displaying Purchased Checkout Table:" + ex);
 
             }
+            finally
+            {
+                conn.Close();
+            }
 
         }
 
@@ -173,7 +177,7 @@ namespace Login_Registered
                     {
                         MessageBox.Show("Inserted Successfully");
                         //Show the new data in the grid
-                        //FillDataGrid();
+                        FillDataGrid();
                         //clear all the previous text fields entries
                         ClearEntries();
                     }

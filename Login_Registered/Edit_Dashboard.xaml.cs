@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
 using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace Login_Registered
 {
@@ -31,9 +32,7 @@ namespace Login_Registered
                 if (conn.State == System.Data.ConnectionState.Open)
                 {
                     status.Content = "Connected";
-                    status.Foreground = new SolidColorBrush(Color.FromRgb(0, 255, 0));
-                    //Calling the function to display the grid
-                    //FillDataGrid();
+                    status.Foreground = new SolidColorBrush(Color.FromRgb(0, 255, 0));              
                 }
                 else
                 {
@@ -56,7 +55,7 @@ namespace Login_Registered
         {
             RadioButton whichone = sender as RadioButton;
             SelectedProductName = whichone.Content + "";
-            MessageBox.Show(SelectedProductName);
+            MessageBox.Show("You have selected : "+SelectedProductName);
 
             
             //After selecting the appropriate radio button, the remaining text fields automatically set a/c to the database previous record
@@ -181,16 +180,8 @@ namespace Login_Registered
             OriginalAmount.Text = "";
             PurchasedAmount.Text = "";
         }
-        private void ClearTrackingDetailsEntries()
-        {
-            //For tacking ID
-            OrderNumber.Text = "";
-            SearchedText.Text = "";
-            TrackingServiceName.Text = "";
-            TrackingID.Text = "";
-
-        }
-
+  
+        //Edit the Blanket Sauna Product Prices
         private void SubmitChanges_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -201,22 +192,70 @@ namespace Login_Registered
                 }
 
 
-                if (ProductVariant.Text != "" && OriginalAmount.Text != "" && PurchasedAmount.Text != "")
+                //BS100
+                if (SelectedProductName == "Blanket Sauna - BS 100, Far Infrared Sauna Blanket")
                 {
-                    String query = "INSERT INTO bs100 (ProductVariant,OriginalAmount,PurchasedAmount) VALUES ('" + ProductVariant.Text + "'," + "'" + OriginalAmount.Text + "','" + PurchasedAmount.Text + "')";
+                    if (ProductVariant.Text != "" && OriginalAmount.Text != "" && PurchasedAmount.Text != "")
+                    {
+                        String query = "INSERT INTO bs100 (ProductVariant,OriginalAmount,PurchasedAmount) VALUES ('" + ProductVariant.Text + "'," + "'" + OriginalAmount.Text + "','" + PurchasedAmount.Text + "')";
 
-                    MySqlCommand sqlcmd = new MySqlCommand(query, conn);
-                    if (sqlcmd.ExecuteNonQuery() == 1)
-                    {
-                        MessageBox.Show("BS 100 Inserted Successfully \nColor: " + ProductVariant.Text + "\nOriginal Amount: " + OriginalAmount.Text + "\nPurchased Amount: " + PurchasedAmount.Text);
-                        //Show the new data in the grid
-                        //FillDataGrid();
-                        //clear all the previous text fields entries
-                        ClearProductDetailsEntries();
+                        MySqlCommand sqlcmd = new MySqlCommand(query, conn);
+                        if (sqlcmd.ExecuteNonQuery() == 1)
+                        {
+                            MessageBox.Show("BS 100 Inserted Successfully \n\nColor: " + ProductVariant.Text + "\nOriginal Amount: " + OriginalAmount.Text + "\nPurchased Amount: " + PurchasedAmount.Text);
+                            //Show the new data in the grid
+                            //FillDataGrid();
+                            //clear all the previous text fields entries
+                            ClearProductDetailsEntries();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Not Inserted ");
+                        }
                     }
-                    else
+                }
+                //BS103
+                else if (SelectedProductName == "Blanket Sauna - BS 103, Jade and Tourmaline Stones")
+                {
+                    if (ProductVariant.Text != "" && OriginalAmount.Text != "" && PurchasedAmount.Text != "")
                     {
-                        MessageBox.Show("Not Inserted ");
+                        String query = "INSERT INTO bs103 (ProductVariant,OriginalAmount,PurchasedAmount) VALUES ('" + ProductVariant.Text + "'," + "'" + OriginalAmount.Text + "','" + PurchasedAmount.Text + "')";
+
+                        MySqlCommand sqlcmd = new MySqlCommand(query, conn);
+                        if (sqlcmd.ExecuteNonQuery() == 1)
+                        {
+                            MessageBox.Show("BS 103 Inserted Successfully \n\nColor: " + ProductVariant.Text + "\nOriginal Amount: " + OriginalAmount.Text + "\nPurchased Amount: " + PurchasedAmount.Text);
+                            //Show the new data in the grid
+                            //FillDataGrid();
+                            //clear all the previous text fields entries
+                            ClearProductDetailsEntries();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Not Inserted ");
+                        }
+                    }
+                }
+                //BS106
+                else if (SelectedProductName == "Blanket Sauna - BS 106, Bain Stones, Negative Ionic Cloth and Photon Lights")
+                {
+                    if (ProductVariant.Text != "" && OriginalAmount.Text != "" && PurchasedAmount.Text != "")
+                    {
+                        String query = "INSERT INTO bs106 (ProductVariant,OriginalAmount,PurchasedAmount) VALUES ('" + ProductVariant.Text + "'," + "'" + OriginalAmount.Text + "','" + PurchasedAmount.Text + "')";
+
+                        MySqlCommand sqlcmd = new MySqlCommand(query, conn);
+                        if (sqlcmd.ExecuteNonQuery() == 1)
+                        {
+                            MessageBox.Show("BS 106 Inserted Successfully \n\nColor: " + ProductVariant.Text + "\nOriginal Amount: " + OriginalAmount.Text + "\nPurchased Amount: " + PurchasedAmount.Text);
+                            //Show the new data in the grid
+                            //FillDataGrid();
+                            //clear all the previous text fields entries
+                            ClearProductDetailsEntries();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Not Inserted ");
+                        }
                     }
                 }
                 else
@@ -236,16 +275,191 @@ namespace Login_Registered
             }
         }
 
-        private void Refresh_Click(object sender, RoutedEventArgs e)
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //Tracking ID Details
+
+        private void ClearTrackingDetailsEntries()
         {
-            Edit_Dashboard mainWindow = new Edit_Dashboard();
-            mainWindow.Show();
-            this.Close();
+            //OrderNumber.Text = "";
+            TrackingServiceName.Text = "";
+            TrackingID.Text = "";
+
         }
+        private void FillDataGrid(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (conn.State == System.Data.ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
+                String query = "SELECT FullName,Email,Address,City,Country,Province,ZipCode,SpecialNote," +
+                    "OrderNumber,DateTime,PurchasedProductNamer,ProductVariant,QuantityPurchased,OriginalAmount,PurchasedAmount" +
+                    ",DiscountGiven,PurchasedAmountAfterDiscount,TrackingID,ShipmentThrough,Shipped FROM purchased_checkout where OrderNumber = @OrderNumber";
+                MySqlCommand sqlcmd = new MySqlCommand(query, conn);
+                sqlcmd.Parameters.AddWithValue("@OrderNumber", OrderNumber.Text);
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(sqlcmd);
+                DataTable dt = new DataTable("Purchased Checkout");
+                adapter.Fill(dt);
+                DisplaySearch.ItemsSource = dt.DefaultView;
+
+                //display the tracking id and Shipment through
+                MySqlDataReader read =sqlcmd.ExecuteReader();
+                while(read.Read())
+                {
+                    TrackingID.Text =read.GetValue(17).ToString();
+                    TrackingServiceName.Text = read.GetValue(18).ToString();
+                }
+                read.Close();
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errors in Displaying Searched Table:" + ex);
+            }
+            finally
+            {
+                conn.Close();
+                
+            }
+
+        }
+
+        //When Enter Key is pressed
+        private void OrderNumber_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                RoutedEventArgs convert = e;
+                FillDataGrid(sender, convert);
+
+            }
+        }
+        //When any text changes
+        private void OrderNumber_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            RoutedEventArgs convert = e;
+            FillDataGrid(sender, convert);
+        }
+
+        //Submit TrackingID Status
+        private void SubmitTracking_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (conn.State == System.Data.ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
+
+                //Adding the Tracking id and Shippment through like DHL,UPS,Fedx, etc
+                if (TrackingServiceName.Text != "" && TrackingID.Text != "" && OrderNumber.Text != "")
+                {
+                    String query = "UPDATE purchased_checkout SET TrackingID = @TrackingID,ShipmentThrough = @TrackingServiceName WHERE OrderNumber = @OrderNumber";
+                    MySqlCommand sqlcmd = new MySqlCommand(query, conn);
+                    sqlcmd.Parameters.AddWithValue("@TrackingID", TrackingID.Text);
+                    sqlcmd.Parameters.AddWithValue("@TrackingServiceName", TrackingServiceName.Text);
+                    sqlcmd.Parameters.AddWithValue("@OrderNumber", OrderNumber.Text);
+
+                    if (sqlcmd.ExecuteNonQuery() == 1)
+                    {
+                       MessageBox.Show("Tracking Details Added for Order Number : " + OrderNumber.Text);
+                       //Show the new data in the grid
+                       FillDataGrid(sender,e);
+                       //clear all the previous text fields entries
+                       ClearTrackingDetailsEntries();
+                    }
+                    else
+                    {
+                       MessageBox.Show("Tracking Details Not Inserted, Please Check the Order Number ");
+                    }
+                    
+                }
+                
+                else
+                {
+                    MessageBox.Show("Please! Fill all the Tracking fields");
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception Caught : " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        string ShippedStatus = null;
+        private void ShippedCheck(object sender, RoutedEventArgs e)
+        {
+            RadioButton whichone = sender as RadioButton;
+            ShippedStatus = whichone.Content.ToString();
+        }
+
+        //Submit Shipped Status 
+        private void SubmitShippedStatus_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (conn.State == System.Data.ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
+                
+                //Adding the Tracking id and Shippment through like DHL,UPS,Fedx, etc
+                if (TrackingServiceName.Text != "" && TrackingID.Text != "" && OrderNumber.Text != "" && ShippedStatus != null)
+                {
+                    String query = "UPDATE purchased_checkout SET Shipped = @ShippedStatus WHERE OrderNumber = @OrderNumber";
+                    MySqlCommand sqlcmd = new MySqlCommand(query, conn);
+                    sqlcmd.Parameters.AddWithValue("@ShippedStatus", ShippedStatus);
+                    sqlcmd.Parameters.AddWithValue("@OrderNumber", OrderNumber.Text);
+
+                    if (sqlcmd.ExecuteNonQuery() == 1)
+                    {
+                        MessageBox.Show("Shipped Status Changed : " + ShippedStatus +
+                                        "\nOrder Number : " + OrderNumber.Text +
+                                        "\nTracking ID : " + TrackingID.Text +
+                                        "\nShipment Through : " + TrackingServiceName.Text);
+                        //Show the new data after shipped status in the grid
+                        FillDataGrid(sender, e);
+                        //clear all the previous text fields entries
+                        ClearTrackingDetailsEntries();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Shippment Status Not Updated, Please Check the Order Number,Tracking ID and Service Name ");
+                    }
+                }
+
+                else
+                {
+                    MessageBox.Show("Please check Order Number, Tracking Id, Service Name or Shipped Status");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception Caught : " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
 
         private void Logout_Click(object sender, RoutedEventArgs e)
         {
-            Edit_Dashboard Window = new Edit_Dashboard();
+            MainWindow Window = new MainWindow();
             Window.Show();
             if (conn.State == System.Data.ConnectionState.Open)
             {
@@ -254,13 +468,12 @@ namespace Login_Registered
             this.Close();
         }
 
-        
-
-        private void SubmitTracking_Click(object sender, RoutedEventArgs e)
+        private void Refresh_Click(object sender, RoutedEventArgs e)
         {
-
+            Edit_Dashboard mainWindow = new Edit_Dashboard();
+            mainWindow.Show();
+            this.Close();
         }
-
         private void BackToPurchasedCheckout_Click(object sender, RoutedEventArgs e)
         {
    
@@ -294,5 +507,7 @@ namespace Login_Registered
             mainWindow.Show();
             this.Close();
         }
+
+       
     }
 }

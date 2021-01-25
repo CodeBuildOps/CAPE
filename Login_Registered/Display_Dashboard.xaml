@@ -30,7 +30,7 @@
             <Button HorizontalAlignment="Right" FontSize="18" Foreground="White" Width="72" Background="#04c582" Content="Logout" Margin="0,42,25,0" VerticalAlignment="Top" Click="Logout_Click"/>
 
             <!--Connected/Not connected status-->
-            <Label HorizontalAlignment="Right" Content="Conneted / Not-Connected" Name="status" FontSize="12" Foreground="White" Margin="0,75,25,532"  />
+            <Label HorizontalAlignment="Right" Name="status" FontSize="12" Foreground="White" Margin="0,75,25,1027"  />
 
             <!--Main Heading (Purchased Checkout)-->
             <Label Foreground="White" FontSize="25" Content="Display Dashboard" HorizontalContentAlignment="Center" Margin="354,27,334,0" VerticalAlignment="Top" Width="395"/>
@@ -49,54 +49,54 @@
             <Label FontSize="18" Foreground="White" Content="Your Products" HorizontalAlignment="Left" Margin="10,76,0,0" VerticalAlignment="Top" Width="219"/>
             <!--BS 100-->
             <Image Stretch="Fill" Source="C:\Users\abhi\Desktop\CAPE\Images\BS100.png" HorizontalAlignment="Left" Height="100" Margin="10,119,0,0" VerticalAlignment="Top" Width="162"/>
-            <Label FontSize="18" Foreground="White" Content="BS 100" HorizontalAlignment="Left" Margin="10,219,0,0" VerticalAlignment="Top" Width="205"/>
-            <Label FontSize="18" Foreground="White" Content="Original Price : $USD" HorizontalAlignment="Left" Margin="10,253,0,0" VerticalAlignment="Top" Width="205"/>
-            <Label FontSize="18" Foreground="White" Content="Customer Price : $USD" HorizontalAlignment="Left" Margin="10,284,0,0" VerticalAlignment="Top" Width="205"/>
+            <Label FontSize="15" Foreground="White" Content="BS 100" HorizontalAlignment="Left" Margin="10,219,0,0" VerticalAlignment="Top" Width="205"/>
+            <Label Name="OriginalPriceBS100" FontSize="15" Foreground="White" Content="Original Price : " HorizontalAlignment="Left" Margin="10,253,0,0" VerticalAlignment="Top" Width="205"/>
+            <Label Name="CustomerPriceBS100" FontSize="15" Foreground="White" Content="Customer Price : " HorizontalAlignment="Left" Margin="10,284,0,0" VerticalAlignment="Top" Width="205"/>
 
 
             <!--BS 103-->
             <Image Stretch="Fill" Source="C:\Users\abhi\Desktop\CAPE\Images\BS103.png" HorizontalAlignment="Left" Height="100" Margin="218,119,0,0" VerticalAlignment="Top" Width="164" RenderTransformOrigin="0.897,0.494"/>
-            <Label FontSize="18" Foreground="White" Content="BS 103" HorizontalAlignment="Left" Margin="218,219,0,0" VerticalAlignment="Top" Width="100"/>
-            <Label FontSize="18" Foreground="White" Content="Original Price : $USD" HorizontalAlignment="Left" Margin="217,253,0,0" VerticalAlignment="Top" Width="205"/>
-            <Label FontSize="18" Foreground="White" Content="Customer Price : $USD" HorizontalAlignment="Left" Margin="218,284,0,0" VerticalAlignment="Top" Width="205"/>
+            <Label FontSize="15" Foreground="White" Content="BS 103" HorizontalAlignment="Left" Margin="218,219,0,0" VerticalAlignment="Top" Width="100"/>
+            <Label Name="OriginalPriceBS103" FontSize="15" Foreground="White" Content="Original Price : " HorizontalAlignment="Left" Margin="217,253,0,0" VerticalAlignment="Top" Width="205"/>
+            <Label Name="CustomerPriceBS103" FontSize="15" Foreground="White" Content="Customer Price : " HorizontalAlignment="Left" Margin="218,284,0,0" VerticalAlignment="Top" Width="205"/>
 
 
             <!--BS 106-->
             <Image Stretch="Fill" Source="C:\Users\abhi\Desktop\CAPE\Images\BS106.jpg" HorizontalAlignment="Left" Height="100" Margin="427,114,0,0" VerticalAlignment="Top" Width="165"/>
-            <Label FontSize="18" Foreground="White" Content="BS 106" HorizontalAlignment="Left" Margin="427,219,0,0" VerticalAlignment="Top" Width="100"/>
-            <Label FontSize="18" Foreground="White" Content="Original Price : $USD" HorizontalAlignment="Left" Margin="427,253,0,0" VerticalAlignment="Top" Width="205"/>
-            <Label FontSize="18" Foreground="White" Content="Customer Price : $USD" HorizontalAlignment="Left" Margin="427,284,0,0" VerticalAlignment="Top" Width="205"/>
+            <Label FontSize="15" Foreground="White" Content="BS 106" HorizontalAlignment="Left" Margin="427,219,0,0" VerticalAlignment="Top" Width="100"/>
+            <Label Name="OriginalPriceBS106" FontSize="15" Foreground="White" Content="Original Price : " HorizontalAlignment="Left" Margin="427,253,0,0" VerticalAlignment="Top" Width="205"/>
+            <Label Name="CustomerPriceBS106" FontSize="15" Foreground="White" Content="Customer Price : " HorizontalAlignment="Left" Margin="427,284,0,0" VerticalAlignment="Top" Width="205"/>
 
 
             <Separator Background="Yellow" HorizontalAlignment="Left" Height="28" Margin="14,329,0,0" VerticalAlignment="Top" Width="605"/>
 
             <!--Dispaly All members-->
-            <Label FontSize="18" Foreground="White" Content="All Member We Have" HorizontalAlignment="Left" Margin="14,387,0,0" VerticalAlignment="Top" Width="219"/>
-            <DataGrid  Background="Beige" Name="all_members" FontSize="12" Height="250" Margin="14,426,688,461"/>
+            <Label FontSize="18" Foreground="White" Content="All Member We Have" HorizontalAlignment="Left" Margin="14,806,0,0" VerticalAlignment="Top" Width="219"/>
+            <DataGrid  Background="Beige" Name="all_members" FontSize="12" Margin="16,840,686,221"/>
 
 
             <!--Members Add/Delete/Update-->
-            <Button HorizontalAlignment="Left" Click="AddMember_Click"  Cursor="Hand" Height="36" Foreground="White" Background="#04c582" FontSize="18" Content="Add Member" Margin="14,706,0,0" VerticalAlignment="Top" Width="142"/>
-            <Button HorizontalAlignment="Left" Click="UpdateMember_Click"  Cursor="Hand" Height="36" Foreground="White" Background="#04c582" FontSize="18" Content="Update Member" Margin="191,706,0,0" VerticalAlignment="Top" Width="142"/>
-            <Button HorizontalAlignment="Left" Click="DeleteMember_Click"  Cursor="Hand" Height="36" Foreground="White" Background="#04c582" FontSize="18" Content="Delete Member" Margin="358,706,0,0" VerticalAlignment="Top" Width="142"/>
+            <Button HorizontalAlignment="Left" Click="AddMember_Click"  Cursor="Hand" Height="36" Foreground="White" Background="#04c582" FontSize="18" Content="Add Member" Margin="22,940,0,0" VerticalAlignment="Top" Width="142"/>
+            <Button HorizontalAlignment="Left" Click="UpdateMember_Click"  Cursor="Hand" Height="36" Foreground="White" Background="#04c582" FontSize="18" Content="Update Member" Margin="184,940,0,0" VerticalAlignment="Top" Width="142"/>
+            <Button HorizontalAlignment="Left" Click="DeleteMember_Click"  Cursor="Hand" Height="36" Foreground="White" Background="#04c582" FontSize="18" Content="Delete Member" Margin="352,940,0,0" VerticalAlignment="Top" Width="142"/>
 
 
-            <Separator Background="Yellow" HorizontalAlignment="Left" Height="28" Margin="10,767,0,0" VerticalAlignment="Top" Width="605"/>
+            <Separator Background="Yellow" HorizontalAlignment="Left" Height="28" Margin="0,771,0,0" VerticalAlignment="Top" Width="622"/>
 
 
             <!--Display Relevant Purchased Checkout info-->
-            <Label FontSize="18" Foreground="White" Content="All Purchased Checkout" HorizontalAlignment="Left" Margin="700,838,0,0" VerticalAlignment="Top" Width="219"/>
-            <DataGrid  Background="Beige" Name="PurchasedCheckout" FontSize="12" Height="250" Margin="692,887,10,0"/>
+            <Label FontSize="18" Foreground="White" Content="All Purchased Checkout" HorizontalAlignment="Left" Margin="12,570,0,0" VerticalAlignment="Top" Width="219"/>
+            <DataGrid Name="DisplayPurchased" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible" FontSize="12" HorizontalAlignment="Right" Height="137" Margin="0,609,705,0" VerticalAlignment="Top" Width="605"/>
 
             <!--Display Relevant Abandoned Checkout info-->
-            <Label FontSize="18" Foreground="White" Content="All Abandoned Checkout" HorizontalAlignment="Left" Margin="14,838,0,0" VerticalAlignment="Top" Width="219"/>
-            <DataGrid Background="Beige"  Name="AbandonedCheckout" FontSize="12" Height="250" Margin="10,877,692,10"/>
+            <Label FontSize="18" Foreground="White" Content="All Abandoned Checkout" HorizontalAlignment="Left" Margin="12,362,0,0" VerticalAlignment="Top" Width="219"/>
+            <DataGrid Name="DisplayAbandoned" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible" FontSize="12" HorizontalAlignment="Right" Height="164" Margin="0,401,705,0" VerticalAlignment="Top" Width="605"/>
 
 
             <!---**********************************************-->
 
 
-            <Separator Background="Yellow" Height="20" Margin="210,591,196,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <Separator Background="Yellow" Height="20" Margin="210,551,196,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
                 <Separator.RenderTransform>
                     <TransformGroup>
                         <RotateTransform Angle="90"/>
@@ -111,23 +111,28 @@
 
             <!--Order Number Searched-->
             <Label FontSize="18" Foreground="White" Content="Order Number Search" HorizontalAlignment="Left" Margin="700,160,0,0" VerticalAlignment="Top" Width="219"/>
-            <TextBox Name="OrderNumber" Background="#545d6a" Foreground="White" FontSize="18" HorizontalAlignment="Left" Height="23" Margin="974,160,0,0" VerticalAlignment="Top" Width="201"/>
+            <TextBox KeyDown="OrderNumber_KeyDown" TextChanged="OrderNumber_TextChanged" Name="OrderNumber" Background="#545d6a" Foreground="White" FontSize="18" HorizontalAlignment="Left" Height="23" Margin="974,160,0,0" VerticalAlignment="Top" Width="201"/>
 
-            <!--Display the searched Order Id details-->
-            <TextBlock FontSize="15" Foreground="Red" Background="Beige" HorizontalAlignment="Left" Margin="700,219,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="125" Width="605"/>
+
+            <!---Display searched Order Id details in Datagrid-->
+            <DataGrid Name="DisplaySearch" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible" FontSize="12" HorizontalAlignment="Right" Height="107" VerticalAlignment="Top" Width="597" Margin="0,207,25,0"/>
 
             <!--Total 
-            1. Sales
+            1. Purchased
             2. Abandoned
-            3. Country List
             -->
-            <TextBlock Background="DarkMagenta" HorizontalAlignment="Left" Margin="700,368,0,0" TextWrapping="Wrap" Text="Total Sales Related BS 100" VerticalAlignment="Top" Height="132" Width="178"/>
-            <TextBlock Background="Chartreuse" HorizontalAlignment="Left" Margin="922,368,0,0" TextWrapping="Wrap" Text="Total Sales Related BS 103" VerticalAlignment="Top" Height="132" Width="178"/>
-            <TextBlock Background="Bisque" HorizontalAlignment="Left" Margin="1127,368,0,0" TextWrapping="Wrap" Text="Total Sales Related BS 106" VerticalAlignment="Top" Height="132" Width="178"/>
+            <TextBlock Name="BS100Box" Background="Purple" HorizontalAlignment="Left" Margin="700,355,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="132" Width="178"/>
+            <TextBlock Name="BS103Box" Background="Chartreuse" HorizontalAlignment="Left" Margin="920,355,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="132" Width="178"/>
+            <TextBlock Name="BS106Box" Background="WhiteSmoke" HorizontalAlignment="Left" Margin="1127,355,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="132" Width="178"/>
 
-            <Separator Background="Yellow" HorizontalAlignment="Left" Height="28" Margin="700,537,0,0" VerticalAlignment="Top" Width="605"/>
+            <Separator Background="Yellow" HorizontalAlignment="Left" Height="28" Margin="700,492,0,0" VerticalAlignment="Top" Width="605"/>
+
+            <!--Ongoing Sales-->
+            <Label FontSize="18" Foreground="White" Content="On Going Sales" HorizontalAlignment="Left" Margin="700,531,0,0" VerticalAlignment="Top" Width="143"/>
+            <TextBlock FontSize="15" Name="OnGoingSales" Foreground="White" HorizontalAlignment="Left" Margin="711,570,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="229" Width="594"/>
 
         </Grid>
     </ScrollViewer>
+
 
 </Window>

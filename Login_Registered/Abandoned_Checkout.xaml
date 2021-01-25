@@ -51,9 +51,9 @@
             <Label FontSize="18" Foreground="White" Content="Product Left" HorizontalAlignment="Left" Margin="36,253,0,0" VerticalAlignment="Top" Width="144"/>
 
             <!--Product Left Radio button-->
-            <RadioButton Name="BS100" GroupName="BS" Checked = "BSCheck" FontSize="18" Foreground="White" Content="Blanket Sauna - BS 100, Far Infrared Sauna Blanket" HorizontalAlignment="Left" Margin="200,254,0,0" VerticalAlignment="Top" Height="28" Width="486"/>
-            <RadioButton Name="BS103" GroupName="BS" Checked = "BSCheck" FontSize="18" Foreground="White" Content="Blanket Sauna - BS 103, Jade and Tourmaline Stones" HorizontalAlignment="Left" Margin="200,282,0,0" VerticalAlignment="Top" Height="28" Width="835"/>
-            <RadioButton Name="BS106" GroupName="BS" Checked = "BSCheck" FontSize="18" Foreground="White" Content="Blanket Sauna - BS 106, Bain Stones, Negative Ionic Cloth and Photon Lights" HorizontalAlignment="Left" Margin="200,310,0,0" VerticalAlignment="Top" Height="28" Width="629"/>
+            <RadioButton Name="BS100" GroupName="BS" Checked = "BSCheck" FontSize="18" Foreground="White" Content="BS 100" HorizontalAlignment="Left" Margin="200,254,0,0" VerticalAlignment="Top" Height="28" Width="486"/>
+            <RadioButton Name="BS103" GroupName="BS" Checked = "BSCheck" FontSize="18" Foreground="White" Content="BS 103" HorizontalAlignment="Left" Margin="200,282,0,0" VerticalAlignment="Top" Height="28" Width="835"/>
+            <RadioButton Name="BS106" GroupName="BS" Checked = "BSCheck" FontSize="18" Foreground="White" Content="BS 106" HorizontalAlignment="Left" Margin="200,310,0,0" VerticalAlignment="Top" Height="28" Width="629"/>
 
             <!--Product variant(Color) left-->
             <Label FontSize="18" Foreground="White" Content="Product Variant" HorizontalAlignment="Left" Margin="36,353,0,0" VerticalAlignment="Top" Width="144"/>

@@ -85,9 +85,9 @@
 
             <!--Purchased Product Name-->
             <Label FontSize="18" Foreground="White" Content="Purchased Product Name" HorizontalAlignment="Left" Margin="626,251,0,0" VerticalAlignment="Top" Width="219"/>
-            <RadioButton Name="BS100" GroupName="BS" Checked = "BSCheck" FontSize="18" Foreground="White" Content="Blanket Sauna - BS 100, Far Infrared Sauna Blanket" HorizontalAlignment="Left" Margin="928,252,0,0" VerticalAlignment="Top" Height="28" Width="304"/>
-            <RadioButton Name="BS103" GroupName="BS" Checked = "BSCheck" FontSize="18" Foreground="White" Content="Blanket Sauna - BS 103, Jade and Tourmaline Stones" HorizontalAlignment="Left" Margin="928,289,0,0" VerticalAlignment="Top" Height="28" Width="304"/>
-            <RadioButton Name="BS106" GroupName="BS" Checked = "BSCheck" FontSize="18" Foreground="White" Content="Blanket Sauna - BS 106, Bain Stones, Negative Ionic Cloth and Photon Lights" HorizontalAlignment="Left" Margin="928,321,0,0" VerticalAlignment="Top" Height="28" Width="304"/>
+            <RadioButton Name="BS100" GroupName="BS" Checked = "BSCheck" FontSize="18" Foreground="White" Content="BS 100" HorizontalAlignment="Left" Margin="928,252,0,0" VerticalAlignment="Top" Height="28" Width="304"/>
+            <RadioButton Name="BS103" GroupName="BS" Checked = "BSCheck" FontSize="18" Foreground="White" Content="BS 103" HorizontalAlignment="Left" Margin="928,289,0,0" VerticalAlignment="Top" Height="28" Width="304"/>
+            <RadioButton Name="BS106" GroupName="BS" Checked = "BSCheck" FontSize="18" Foreground="White" Content="BS 106" HorizontalAlignment="Left" Margin="928,321,0,0" VerticalAlignment="Top" Height="28" Width="304"/>
 
 
             <!--Product Variant-->
@@ -140,7 +140,7 @@
             <Label Name="UsernameSession" FontSize="18" Foreground="White" Content="Username_Session" HorizontalContentAlignment="Right" HorizontalAlignment="Right" Margin="0,10,25,0" VerticalAlignment="Top" Width="151"/>
 
 
-            <!---Display All Abandoned Checkout-->
+            <!---Display All Purchased Checkout-->
             <DataGrid Name="DisplayPurchased" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible" FontSize="12" HorizontalAlignment="Right" Height="114" Margin="0,703,53,0" VerticalAlignment="Top" Width="1212"/>
 
 
