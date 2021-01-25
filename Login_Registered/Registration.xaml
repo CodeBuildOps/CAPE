@@ -1,4 +1,5 @@
-﻿<Window x:Class="Login_Registered.Registration"
+﻿<!--REGISTRATION PAGE-->
+<Window x:Class="Login_Registered.Registration"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -16,11 +17,11 @@
             <Label Foreground="White" Content="Registration" FontSize="25" HorizontalAlignment="Center"/>
             <Separator></Separator>
 
-            <Label Foreground="White" Content="First Name"/>
-            <TextBox Name="firstname" Background="#545d6a" Foreground="White" FontSize="18" />
+            <Label Foreground="White" Content="Full Name"/>
+            <TextBox Name="fullname" Background="#545d6a" Foreground="White" FontSize="18" />
 
-            <Label Foreground="White" Content="Last Name"/>
-            <TextBox Name="lastname" Background="#545d6a" Foreground="White" FontSize="18"/>
+            <Label Foreground="White" Content="Email"/>
+            <TextBox Name="email" Background="#545d6a" Foreground="White" FontSize="18"/>
 
             <Label Foreground="White" Content="Username"/>
             <TextBox Name="username" Background="#545d6a" Foreground="White" FontSize="18"/>
