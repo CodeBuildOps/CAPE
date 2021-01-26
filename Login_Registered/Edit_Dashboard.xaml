@@ -8,7 +8,7 @@
         mc:Ignorable="d"
        Title="Edit Dashboard" 
         WindowStartupLocation="CenterScreen" WindowState="Maximized"
-        WindowStyle="ThreeDBorderWindow" Background="#04c582" Icon="C:\Users\abhi\Desktop\hcci_logo.jpg" Height="700" Width="1200">
+        WindowStyle="ThreeDBorderWindow" Background="#04c582" Icon="hcci_icon.ico" Height="700" Width="1200">
 
     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
 
@@ -30,7 +30,7 @@
             <Button HorizontalAlignment="Right" FontSize="18" Foreground="White" Width="72" Background="#04c582" Content="Logout" Margin="0,42,25,0" VerticalAlignment="Top" Click="Logout_Click"/>
 
             <!--Connected/Not connected status-->
-            <Label HorizontalAlignment="Right" Content="Conneted / Not-Connected" Name="status" FontSize="12" Foreground="White" Margin="0,75,25,532"  />
+            <Label HorizontalAlignment="Right" Name="status" FontSize="12" Foreground="White" Margin="0,75,25,532"  />
 
             <!--Main Heading (Purchased Checkout)-->
             <Label Foreground="White" FontSize="25" Content="Edit Your Dashboard" HorizontalContentAlignment="Center" Margin="354,27,334,0" VerticalAlignment="Top" Width="395"/>

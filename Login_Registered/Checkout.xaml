@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="Purchased Checkout" 
         WindowStartupLocation="CenterScreen" WindowState="Maximized"
-        WindowStyle="ThreeDBorderWindow" Background="#04c582" Icon="C:\Users\abhi\Desktop\hcci_logo.jpg" Height="902" Width="1310">
+        WindowStyle="ThreeDBorderWindow" Background="#04c582" Icon="hcci_icon.ico" Height="902" Width="1310">
 
     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
 
@@ -30,7 +30,7 @@
             <Button HorizontalAlignment="Right" FontSize="18" Foreground="White" Width="72" Background="#04c582" Content="Logout" Margin="0,42,25,0" VerticalAlignment="Top" Click="Logout_Click"/>
 
             <!--Connected/Not connected status-->
-            <Label HorizontalAlignment="Right" Content="Conneted / Not-Connected" Name="status" FontSize="12" Foreground="White" Margin="0,75,25,690"  />
+            <Label HorizontalAlignment="Right" Name="status" FontSize="12" Foreground="White" Margin="0,75,25,734"  />
 
             <!--Main Heading (Purchased Checkout)-->
             <Label Foreground="White" FontSize="25" Content="Purchased Checkout" HorizontalContentAlignment="Center" Margin="452,37,432,0" VerticalAlignment="Top" Width="395"/>
