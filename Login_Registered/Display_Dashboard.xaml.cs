@@ -299,18 +299,6 @@ namespace Login_Registered
                 DataTable dt = new DataTable("Purchased Checkout");
                 adapter.Fill(dt);
                 DisplaySearch.ItemsSource = dt.DefaultView;
-
-                /*
-                //display the tracking id and Shipment through
-                MySqlDataReader read = sqlcmd.ExecuteReader();
-                while (read.Read())
-                {
-                    TrackingID.Text = read.GetValue(17).ToString();
-                    TrackingServiceName.Text = read.GetValue(18).ToString();
-                }
-                
-                read.Close();
-                */
             }
             catch (Exception ex)
             {
