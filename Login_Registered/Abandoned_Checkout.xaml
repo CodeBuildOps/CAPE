@@ -8,11 +8,11 @@
         mc:Ignorable="d"
         Title="Abandoned Checkout" 
         WindowStartupLocation="CenterScreen" WindowState="Maximized"
-        WindowStyle="ThreeDBorderWindow" Background="red" Icon="C:\Users\abhi\Desktop\hcci_logo.jpg" Height="700" Width="1200">
+        WindowStyle="ThreeDBorderWindow" Background="red" Icon="hcci_icon.ico" Height="700" Width="1090">
 
     <ScrollViewer VerticalScrollBarVisibility="Auto">
 
-        <Grid Background="Black" Height="650" Margin="20">
+        <Grid Background="Black" Height="650" Width="1090">
 
             <!--Refresh Button-->
             <Button Foreground="White" Width="77" Background="Brown" Click="Refresh_Click" Cursor="Hand" FontSize="15" Content="Refresh" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" />
@@ -30,7 +30,7 @@
             <Button HorizontalAlignment="Right" FontSize="18" Foreground="White" Width="72" Background="#04c582" Content="Logout" Margin="0,42,25,0" VerticalAlignment="Top" Click="Logout_Click"/>
 
             <!--Connected/Not connected status-->
-            <Label HorizontalAlignment="Right" Content="Conneted / Not-Connected" Name="status" FontSize="12" Foreground="White" Margin="0,75,25,636"  />
+            <Label HorizontalAlignment="Right" Name="status" FontSize="12" Foreground="White" Margin="0,75,25,540"  />
 
             <!--Main Heading (Abandoned Checkout)-->
             <Label Foreground="White" FontSize="25" Content="Abandoned Checkout" HorizontalContentAlignment="Center" Margin="402,35,370,0" VerticalAlignment="Top" Width="395"/>

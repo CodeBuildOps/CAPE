@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Login_Registered"
         mc:Ignorable="d"
-        Title="Registration" Left="500" Top="220" ResizeMode="NoResize" Height="480" Width="400" FontSize="14" Background="#04c582" Icon="C:\Users\abhi\Desktop\hcci_logo.jpg">
+        Title="Registration" Left="500" Top="220" ResizeMode="NoResize" Height="499.869" Width="400" FontSize="14" Background="#04c582" Icon="hcci_icon.ico">
     <Border Background="black" CornerRadius="20" Margin="20">
         <StackPanel Margin="20">
 
@@ -30,6 +30,11 @@
             <PasswordBox Name="password" Background="#545d6a" Foreground="White" FontSize="18"/>
 
             <Button FontSize="18" Margin="100 10" Name="register" Foreground="White" Background="#04c582" Content="Register" Click="Register_Click" Cursor="Hand"/>
+           
+            <!--Back Login-->
+            <Button FontSize="12" Name="Back_To_Login_link" Foreground="White" Margin="100,8"  Background="{x:Null}" Content="Back To Login" HorizontalContentAlignment="Center" Cursor="Hand" Click="Back_To_Login_Click" BorderThickness="0"/>
+
+
         </StackPanel>
     </Border>
 </Window>

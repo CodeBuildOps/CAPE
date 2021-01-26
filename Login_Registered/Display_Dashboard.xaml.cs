@@ -1,4 +1,27 @@
-﻿using System;
+﻿/*---------------------------------------------------------------------+\
+|                                                                       |
+|   Copyright 2020-2021 BLANKET SAUNA and/or its subsidiaries and       |
+|   affiliates.                                                         |
+|   All Rights Reserved                                                 |
+|                                                                       |
+|   Including software, file formats, and audio-visual displays;        |
+|   may only be used pursuant to applicable software license            |
+|   agreement; contains confidential and proprietary information of     |
+|   BLANKET SAUNA and/or third parties which is protected by copyright  |
+|   and trade secret law and may not be provided or otherwise made      |
+|   available without proper authorization.                             |
+|                                                                       |
+|   Unpublished -- rights reserved under the Copyright Laws of the      |
+|   INDIA.                                                              |
+|                                                                       |
+|   BLANKET SAUNA                                                       |
+|   INDIA                                                               |
+|   Co-Founder :Abhishek Kumar Singh                                    |
+|   Founder    :Ajit Kumar Singh                                        |
+|   Website    :https://blanketsauna.com                                |
+\+---------------------------------------------------------------------*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -511,6 +534,10 @@ namespace Login_Registered
         {
             Edit_Dashboard window = new Edit_Dashboard();
             window.Show();
+            if (conn.State == System.Data.ConnectionState.Open)
+            {
+                conn.Close();
+            }
             this.Close();
         }
 
@@ -518,6 +545,10 @@ namespace Login_Registered
         {
             Display_Dashboard window = new Display_Dashboard();
             window.Show();
+            if (conn.State == System.Data.ConnectionState.Open)
+            {
+                conn.Close();
+            }
             this.Close();
         }
 
@@ -525,6 +556,10 @@ namespace Login_Registered
         {
             Checkout window = new Checkout();
             window.Show();
+            if (conn.State == System.Data.ConnectionState.Open)
+            {
+                conn.Close();
+            }
             this.Close();
         }
 
@@ -532,6 +567,10 @@ namespace Login_Registered
         {
             Window1 window = new Window1();
             window.Show();
+            if (conn.State == System.Data.ConnectionState.Open)
+            {
+                conn.Close();
+            }
             this.Close();
         }
 
@@ -539,7 +578,10 @@ namespace Login_Registered
         {
             MainWindow login = new MainWindow();
             login.Show();
-            conn.Close();
+            if (conn.State == System.Data.ConnectionState.Open)
+            {
+                conn.Close();
+            }
             this.Close();
         }
 

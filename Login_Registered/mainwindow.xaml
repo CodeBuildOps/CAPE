@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Login_Registered"
         mc:Ignorable="d"
-        Title="LogIn" Left="500" Top="220" ResizeMode="NoResize" Height="412.672" Width="330" FontSize="14" Background="#04c582" Icon="C:\Users\abhi\Desktop\hcci_logo.jpg">
+        Title="LogIn" Left="500" Top="220" ResizeMode="NoResize" Height="412.672" Width="330" FontSize="14" Background="#04c582" Icon="hcci_icon.ico">
     <Border Background="black" CornerRadius="20" Margin="20">
         <StackPanel Margin="20,20,20,0">
 

@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="Dashboard" 
         WindowStartupLocation="CenterScreen" WindowState="Maximized"
-        WindowStyle="ThreeDBorderWindow" Background="#04c582" Icon="C:\Users\abhi\Desktop\hcci_logo.jpg" Height="1320" Width="1356">
+        WindowStyle="ThreeDBorderWindow" Background="#04c582" Icon="hcci_icon.ico" Height="1320" Width="1356">
 
     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
 
