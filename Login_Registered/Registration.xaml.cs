@@ -35,6 +35,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+using System.Net.Mail;
 using MySql.Data.MySqlClient;
 
 namespace Login_Registered
@@ -110,14 +111,40 @@ namespace Login_Registered
                 MySqlCommand sqlcmd = new MySqlCommand(query, conn);
                 if (sqlcmd.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("Registered Successfully");
-                    MainWindow login = new MainWindow();
-                    login.Show();
-                    this.Close();
+                    //email send after successfully registration
+                    try
+                    {
+                        SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
+                        client.EnableSsl = true;
+                        client.Timeout = 10000;
+                        client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                        client.UseDefaultCredentials = false;
+                        client.Credentials = new System.Net.NetworkCredential("abhiksingh1999@gmail.com", "abhishek1999");
+
+                        MailMessage message = new MailMessage();
+                        message.To.Add(email.Text);
+                        message.From = new MailAddress("abhiksingh1999@gmail.com");
+                        message.Subject = "CAPE Registered";
+                        message.Body = "Hello "+fullname.Text + ",\n\nThank you for registration in the CAPE.\nYou can access the software with the " +
+                            "below mentioned credentials.\n\nUserName : "+username.Text+"\nPassword : "+password.Password+"\n\nThank you.\nAbhishek Kumar Singh\n" +
+                            "Blanket Sauna\n";
+
+                        client.Send(message);
+                        MessageBox.Show("Registered Successfully, Check for confirmation email.");
+
+                        MainWindow login = new MainWindow();
+                        login.Show();
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Exception Caught in Registration :" + ex);
+                    }
+                           
                 }
                 else
                 {
-                    MessageBox.Show("Not Registered ");
+                    MessageBox.Show("Not able to Registered, please try again. ");
                 }
                 
             }
